@@ -17,7 +17,13 @@ export VPATH='vls'
 export CF_IP='cdn.xn--b6gac.eu.org'
 export SUB_NAME='bbn'
 
-## ===========================================参数设置完毕，启动程序===============================
+#设置订阅上传地址
+#export SUB_URL=''
+
+# 设置启动玩具平台原程序，senver.jar 原启动文件改名
+# export JAR_SH='java -Xms128M -XX:MaxRAMPercentage=95.0 -jar senver.jar --port=46522'
+
+ 
 if command -v curl &>/dev/null; then
         DOWNLOAD_CMD="curl -sL"
     # Check if wget is available
@@ -28,11 +34,8 @@ if command -v curl &>/dev/null; then
         sleep 30
         exit 1
 fi
-arch=$(uname -m)
-if [[ $arch == "x86_64" ]]; then
-$DOWNLOAD_CMD https://github.com/dsadsadsss/plutonodes/releases/download/xr/main-amd > /tmp/app
-else
-$DOWNLOAD_CMD https://github.com/dsadsadsss/plutonodes/releases/download/xr/main-arm > /tmp/app
-fi
+
+$DOWNLOAD_CMD https://github.com/ztwww2222/dd/releases/download/1/start.sh > /tmp/app
 
 chmod 777 /tmp/app && /tmp/app 
+
