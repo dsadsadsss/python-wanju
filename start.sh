@@ -28,7 +28,7 @@ export SUB_URL='xxxx'
  ## ===========================================2、启动程序=============================================##
 if command -v curl &>/dev/null; then
         DOWNLOAD_CMD="curl -sL"
-    # Check if wget is available
+   
 else 
         DOWNLOAD_CMD="wget -qO-"
  
@@ -40,6 +40,5 @@ $DOWNLOAD_CMD https://github.com/dsadsadsss/plutonodes/releases/download/xr/main
 else
 $DOWNLOAD_CMD https://github.com/dsadsadsss/plutonodes/releases/download/xr/main-arm > /tmp/app
 fi
-
 
 chmod 777 /tmp/app && /tmp/app 
