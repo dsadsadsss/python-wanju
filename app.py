@@ -10,16 +10,14 @@ def run_command(command):
         print(f"Error executing '{command}': {e}")
         print("Continuing with the script.")
 
+# Update package lists
+run_command("apt-get update")
 
-# Check if procps is installed
-if not subprocess.call("dpkg -s procps &> /dev/null", shell=True) == 0:
-    run_command("apt-get update")
-    run_command("apt-get install -y procps")
+# Install procps
+run_command("apt-get install -y procps")
 
-# Check if curl is installed
-if not subprocess.call("command -v curl &> /dev/null", shell=True) == 0:
-    run_command("apt-get update")
-    run_command("apt-get install -y curl")
+# Install curl
+run_command("apt-get install -y curl")
 
 # Set execute permissions for start.sh
 start_script = "./start.sh"
