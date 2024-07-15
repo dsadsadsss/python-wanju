@@ -15,8 +15,10 @@ export NEZHA_TLS=${NEZHA_TLS:-'1'}
 
 # 设置UUID和路径等
 export UUID=${UUID:-'fd80f56e-93f3-4c85-b2a8-c77216c509a7'}
-export VPATH=${VPATH:-'vls'} 
-export MPATH=${MPATH:-'vms'}
+export VPATH=${VPATH:-'vls'} #vless路径
+export VL_PORT=${VL_PORT:-'8002'} #vless端口
+export MPATH=${MPATH:-'vms'} #vmess路径
+export VM_PORT=${VM_PORT:-'8001'} #vmess端口
 export CF_IP=${CF_IP:-'ip.sb'} # 优选ip
 export SUB_NAME=${SUB_NAME:-'argo'} # 节点名称
 
